@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="1280.0" stylesheets="@chefreception.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ChefReceptionController">
+   <children>
+      <Pane prefHeight="789.0" prefWidth="220.0" styleClass="leftPane" stylesheets="@chefreception.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="809.0" prefWidth="220.0" spacing="111.0" stylesheets="@chefreception.css">
+               <children>
+                  <VBox stylesheets="@admin.css" translateY="55.0">
+                     <children>
+                        <Circle fx:id="adminCercle" fill="DODGERBLUE" radius="57.0" stroke="BLACK" strokeType="INSIDE" translateX="51.0" translateY="12.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="225.0" stylesheets="@chefreception.css" text="Aymane Sabri" textFill="#070707" translateY="19.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="461.0" prefWidth="220.0" spacing="35.0" stylesheets="@admin.css" translateY="13.0">
+                     <children>
+                        <JFXButton fx:id="dashboardBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="228.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="Dashboard">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-dashboard_layout_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="reservationsBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="253.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="Reservations">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-reservation.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="eventBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="266.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="Events">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-event_log.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="roomBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="308.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="Room Manage ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-room_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="productBtn" alignment="TOP_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="250.0" onAction="#click" prefHeight="40.0" prefWidth="308.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="Produits">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-room_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="signOutBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="277.0" styleClass="button-menu2" stylesheets="@chefreception.css" text="SignOut">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-sign_out_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="217.0" prefHeight="788.0" prefWidth="1061.0" stylesheets="@chefreception.css">
+         <children>
+            <Pane fx:id="dashboardPane" layoutX="2.0" prefHeight="790.0" prefWidth="1059.0" style="-fx-background-color: #E5E8EA;" stylesheets="@chefreception.css">
+               <children>
+                  <VBox layoutX="15.0" prefHeight="75.0" prefWidth="1025.0" spacing="8.0" stylesheets="@chefreception.css" translateX="-5.0">
+                     <children>
+                        <Label text="Dashboard " translateY="7.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="669.0833740234375" endY="3.510713577270508E-5" startX="-284.20953369140625" startY="2.288818359375E-5" />
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutY="64.0" prefHeight="94.0" prefWidth="1060.0" spacing="64.0" stylesheets="@chefreception.css" translateX="-16.0">
+                     <children>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefreception.css" translateX="43.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="159.0" text="Allocated Rooms" translateX="105.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="95.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="-35.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-office.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="allocatedRoomsLabel" text="95" textFill="#25c3b0" translateX="186.0" translateY="-81.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefreception.css" translateX="20.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="119.0" text="Free Rooms" translateX="124.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="95.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="-35.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-office.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="freeRommsLabel" text="95" textFill="#25c3b0" translateX="186.0" translateY="-81.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="357.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                           <children>
+                              <Label fx:id="roomReservationLabel" prefHeight="30.0" prefWidth="159.0" text="Reservations" translateX="102.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="101.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true" translateX="12.0" translateY="-26.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-hotel.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="112" textFill="#25c3b0" translateX="157.0" translateY="-79.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="46.0" layoutY="215.0" prefHeight="273.0" prefWidth="999.0" spacing="67.0" stylesheets="@chefreception.css" translateX="-16.0">
+                     <children>
+                        <VBox minWidth="-Infinity" prefHeight="273.0" prefWidth="603.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="272.0" text="Categories Chambres">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Futura Medium" size="25.0" />
+                                 </font>
+                              </Label>
+                              <PieChart fx:id="roomPieChartOnDashboard" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="358.0" styleClass="top-vbox" stylesheets="@chefreception.css" translateX="-34.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="338.0" text="Reservations">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Futura Medium" size="25.0" />
+                                 </font>
+                              </Label>
+                              <PieChart prefHeight="224.0" prefWidth="278.0" styleClass="piechart-legend" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="47.0" layoutY="511.0" prefHeight="261.0" prefWidth="1001.0" spacing="22.0" stylesheets="@chefreception.css" translateX="-16.0">
+                     <children>
+                        <VBox prefHeight="261.0" prefWidth="468.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                           <children>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label text="Events :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchEventOnDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="113.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="249.0" translateY="6.0" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="dashboardTableEvent" prefHeight="288.0" prefWidth="961.0" styleClass="dash-table-view" stylesheets="@chefreception.css">
+                                 <columns>
+                                    <TableColumn fx:id="dashboardEventTitleColumn" prefWidth="75.0" text="Titre" />
+                                    <TableColumn fx:id="dashboardResponsableEventcolumn" prefWidth="129.1826171875" text="Responsable" />
+                                    <TableColumn fx:id="dashboardStartEventColumn" prefWidth="105.4285888671875" text="Date  Debut " />
+                                    <TableColumn fx:id="dashboardFinalEventColumn" prefWidth="156.81735229492188" text="Date  Fin" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="261.0" prefWidth="500.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                           <children>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="130.0" text="Notifications">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchNotifOnDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="113.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="220.0" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableNotificationOnDashboard" prefHeight="288.0" prefWidth="961.0" styleClass="dash-table-view" stylesheets="@chefreception.css">
+                                 <columns>
+                                    <TableColumn fx:id="emetteurNotificationOnDashboardColumn" prefWidth="129.1826171875" text="Emetteur" />
+                                    <TableColumn fx:id="contentNotificationOnDashboardColumn" prefWidth="369.0" text="Content" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane fx:id="eventPane" focusTraversable="true" prefHeight="789.0" prefWidth="1060.0" style="-fx-background-color: #E5E8EA;" stylesheets="@chefreception.css">
+               <children>
+                  <VBox layoutX="11.0" spacing="8.0">
+                     <children>
+                        <Label text="Events" translateY="3.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5" />
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="38.0" layoutY="297.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1010.0" styleClass="top-vbox" stylesheets="@chefreception.css" translateX="-12.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="searchEvent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="140.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="845.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tableEvenement" onMousePressed="#showEventInformation" prefHeight="411.0" prefWidth="1010.0" styleClass="dash-table-view" stylesheets="@chefreception.css">
+                           <columns>
+                              <TableColumn fx:id="eventIdColumun" prefWidth="85.07968139648438" text="Id Evenment" />
+                              <TableColumn fx:id="eventTitleColumn" prefWidth="146.22314453125" text="Titre Evenment" />
+                              <TableColumn fx:id="eventResponsableColumn" prefWidth="176.77691650390625" text="Responsable Evenments " />
+                              <TableColumn fx:id="eventDateStartColumn" prefWidth="161.69720458984375" text="Date Debut " />
+                              <TableColumn fx:id="eventDateFinalColumn" prefWidth="165.41033935546875" text="Date Fin " />
+                              <TableColumn fx:id="eventAdressColumn" prefWidth="270.828857421875" text="Emplacements" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="65.0" prefWidth="641.0" spacing="32.0">
+                           <children>
+                              <JFXButton fx:id="addEventButton1" onAction="#addEventEvent1" prefHeight="35.0" prefWidth="126.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Ajouter ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="modifyEventButton" onAction="#modifyEventEvent" prefHeight="35.0" prefWidth="132.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Modifer ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="deleteEventButton" onAction="#deleteEventEvent" prefHeight="35.0" prefWidth="132.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Supprimer ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="676.0" layoutY="58.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="372.0" styleClass="top-vbox" stylesheets="@admin.css" translateX="-12.0">
+                     <children>
+                        <HBox prefHeight="233.0" prefWidth="343.0" spacing="10.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fitHeight="179.0" fitWidth="503.0" pickOnBounds="true" preserveRatio="true" translateX="83.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-event_log_1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="28.0" layoutY="56.0" minWidth="-Infinity" prefHeight="229.0" prefWidth="623.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="272.0" text="Evenements ">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Futura Medium" size="25.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="eventPieChart" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="roomPane" focusTraversable="true" prefHeight="789.0" prefWidth="1060.0" style="-fx-background-color: #E5E8EA;" stylesheets="@chefreception.css">
+               <children>
+                  <VBox layoutX="11.0" spacing="8.0">
+                     <children>
+                        <Label text="Rooms " translateY="3.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5" />
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="21.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="1014.0" styleClass="top-vbox" stylesheets="@chefreception.css" translateY="300.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="55.0" prefWidth="427.0" text="Chambres">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="262.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="292.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tableChambre" onMousePressed="#showRoomInformation" prefHeight="411.0" prefWidth="1010.0" styleClass="dash-table-view" stylesheets="@chefreception.css">
+                           <columns>
+                              <TableColumn fx:id="idChambreColumn" prefWidth="52.13417053222656" text="Id" />
+                              <TableColumn fx:id="numeroChambreColumn" prefWidth="103.97552490234375" text="Numero " />
+                              <TableColumn fx:id="etageChambreColumn" prefWidth="107.3707275390625" text="Etage " />
+                              <TableColumn fx:id="typeChambreColumn" prefWidth="156.07806396484375" text="Type " />
+                              <TableColumn fx:id="nombrePersonneChambreColumn" prefWidth="164.8267822265625" text="Nombre Personne" />
+                              <TableColumn fx:id="descriptionChambreColumn" prefWidth="293.4271240234375" text="Description" />
+                              <TableColumn fx:id="prixChambreColumn" prefWidth="132.57293701171875" text="Prix" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="65.0" prefWidth="641.0" spacing="32.0">
+                           <children>
+                              <JFXButton fx:id="addChambreButton1" onAction="#addChambreEvent1" prefHeight="35.0" prefWidth="126.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Ajouter ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="modifyChambreButton" onAction="#modifyChambreEvent" prefHeight="35.0" prefWidth="132.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Modifer ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="deleteChambreButton" onAction="#deleteChambreEvent" prefHeight="35.0" prefWidth="132.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Supprimer ">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutX="25.0" layoutY="72.0" prefHeight="237.0" prefWidth="624.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                     <children>
+                        <ImageView fitHeight="219.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true" translateX="17.0" translateY="42.0">
+                           <image>
+                              <Image url="@../Icons/icons8-hotel_bed.png" />
+                           </image>
+                        </ImageView>
+                        <PieChart fx:id="roomPieChart" prefHeight="237.0" prefWidth="518.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="665.0" layoutY="70.0" prefHeight="237.0" prefWidth="366.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                     <children>
+                        <Rectangle fx:id="roomImage" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="236.0" stroke="BLACK" strokeType="INSIDE" width="364.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane fx:id="demandeProduitPane" focusTraversable="true" prefHeight="789.0" prefWidth="1060.0" style="-fx-background-color: #E5E8EA #E5E8EA;" stylesheets="@chefreception.css">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-8.0" spacing="8.0" stylesheets="@chefcuisine.css">
+                     <children>
+                        <Label text="Demande Produit" translateX="6.0" translateY="7.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Line>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="13.0" layoutY="332.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1041.0" styleClass="top-vbox" stylesheets="@chefreception.css">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="31.0" prefWidth="1024.0" stylesheets="@chefcuisine.css">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="316.0" text="Tables Demande Produits ">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="285.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="411.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tableDemande" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="1040.0" styleClass="dash-table-view" stylesheets="@chefreception.css">
+                           <columns>
+                              <TableColumn fx:id="statusDemandeColumn" minWidth="0.0" prefWidth="0.0" text="StatusDemande" />
+                              <TableColumn fx:id="idDemandeColumn" minWidth="0.0" prefWidth="0.0" text="Id Demande" />
+                              <TableColumn fx:id="dateDemandeColumn" prefWidth="107.96319580078125" text="Date " />
+                              <TableColumn fx:id="montantDemandeColumn" prefWidth="131.05413818359375" text="Montant" />
+                              <TableColumn fx:id="descriptionDemandeColumn" prefWidth="799.0" text="Description" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="471.0" spacing="47.0" translateX="-61.0">
+                           <children>
+                              <Button fx:id="addDemandeProduitBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="10.0" mnemonicParsing="false" onAction="#addDemandeProduitEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Ajouter" />
+                              <Button fx:id="modifyDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Modifier" />
+                              <Button fx:id="deleteDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Supprimer" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="80.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutX="19.0" layoutY="62.0" prefHeight="260.0" prefWidth="603.0" spacing="67.0" stylesheets="@chefcomptabilite.css">
+                     <children>
+                        <VBox minWidth="-Infinity" prefHeight="280.0" prefWidth="603.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="255.0" text="Categories Produits">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <PieChart fx:id="categorieProduitPieChart" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="631.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="260.0" prefWidth="415.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                     <children>
+                        <Label text="Services">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="servicePieChartOnDemande" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="addChambrePane" layoutX="42.0" layoutY="9.0" prefHeight="605.0" prefWidth="366.0" style="-fx-background-color: #BAC3C9;" translateX="800.0" translateY="150.0" visible="false">
+         <children>
+            <Button fx:id="exitAddChambreButton" layoutX="340.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitAddChambreEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-close_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Button>
+            <VBox layoutX="54.0" layoutY="85.0" prefHeight="582.0" prefWidth="372.0" spacing="12.0" translateX="-58.0" translateY="-59.0">
+               <children>
+                  <Rectangle fx:id="roomImageRectangle" arcHeight="5.0" arcWidth="5.0" fill="#fdfeff" height="118.0" onMousePressed="#addRoomImage" stroke="BLACK" strokeType="INSIDE" translateX="73.0" width="215.0" />
+                  <VBox spacing="26.0">
+                     <children>
+                        <TextField fx:id="numeroChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Numero Chambre " styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="318.0" spacing="12.0" translateX="2.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="etageChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Etage" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="319.0" spacing="12.0" translateX="2.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="typeChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Type Chambre" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="319.0" spacing="12.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="nombreDePersonneChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Nombre De Personne" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="prixChambre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Prix Chambre" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="123.0" prefWidth="276.0" styleClass="roomdescription" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" translateX="-10.0" translateY="-22.0">
+                     <children>
+                        <VBox prefHeight="121.0" prefWidth="153.0">
+                           <children>
+                              <JFXCheckBox fx:id="salleBain" checkedColor="#19cbeb" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Salle Du Bain" textFill="#f8f8f8" unCheckedColor="#4ed4f5" />
+                              <JFXCheckBox fx:id="telephone" checkedColor="#19cbeb" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Telephone" textFill="#fffefe" unCheckedColor="#4ed4f5" />
+                              <JFXCheckBox fx:id="television" checkedColor="#19cbeb" layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Televesion" textFill="#f8f8f8" unCheckedColor="#4ed4f5" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="123.0" prefWidth="99.0">
+                           <children>
+                              <JFXCheckBox fx:id="climatiseur" checkedColor="#19cbeb" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Climatiseur" textFill="#fcfafa" unCheckedColor="#4ed4f5" />
+                              <JFXCheckBox fx:id="frigo" checkedColor="#19cbeb" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Frigo" textFill="#f8f6f6" unCheckedColor="#4ed4f5" />
+                              <JFXCheckBox fx:id="coffrefort" checkedColor="#19cbeb" layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="206.0" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" text="Coffre Fort" textFill="#fcf8f8" unCheckedColor="#4ed4f5" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="233.0" spacing="10.0" translateX="63.0" translateY="-34.0">
+                     <children>
+                        <Button fx:id="addChambreBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addChambreEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                        <Button fx:id="saveChambreBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveChambrEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="clearChambreBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearChambreEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="addFacturePane" layoutX="239.0" layoutY="71.0" prefHeight="703.0" prefWidth="547.0" style="-fx-background-color: #E5E8EA;" visible="false">
+         <children>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="548.0" stylesheets="@chefcuisine.css">
+               <children>
+                  <Pane fx:id="addRepasPane11" prefHeight="628.0" prefWidth="542.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <VBox layoutX="54.0" layoutY="-67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="544.0" spacing="12.0" translateX="-58.0" translateY="93.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" translateX="31.0" translateY="-9.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-dashboard_layout.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="544.0" spacing="26.0" translateY="65.0">
+                                 <children>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="528.0" spacing="12.0" translateX="8.0" translateY="-174.0">
+                                       <children>
+                                          <ComboBox fx:id="typeProduitOnDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#loadProductsItems" prefHeight="26.0" prefWidth="285.0" promptText="Type" styleClass="service-combo-box" stylesheets="@addemploye.css" translateX="229.0" translateY="-17.0">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <ComboBox fx:id="produitOnDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="285.0" promptText="Produit" styleClass="service-combo-box" stylesheets="@addemploye.css" translateX="242.0" translateY="-183.0" />
+                                    <TextField fx:id="quantiteProduit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="506.0" promptText="Quantite" styleClass="text-field" stylesheets="@addemploye.css" translateX="21.0" translateY="-179.0">
+                                       <font>
+                                          <Font name="Andale Mono" size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea fx:id="ficheDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="522.0" promptText="Descriptin Repas" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="-11.0" translateY="-220.0">
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                    <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="528.0" spacing="12.0" translateY="-718.0" />
+                                 </children>
+                              </VBox>
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="486.0" spacing="47.0" translateX="34.0" translateY="17.0">
+                                 <children>
+                                    <Button fx:id="addProduitOnDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduitOnDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Add" />
+                                    <Button fx:id="submitDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Envoyer" />
+                                    <Button fx:id="clearDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Clear" />
+                                    <Button fx:id="saveDemandeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveDemandeEvent" prefHeight="25.0" prefWidth="123.0" styleClass="button-employees" stylesheets="@chefreception.css" text="Save" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Button fx:id="exitAddFactureButton" layoutX="515.0" layoutY="3.0" mnemonicParsing="false" onAction="#exitAddFactureEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-close_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets top="2.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="AddEventPane" prefHeight="360.0" prefWidth="331.0" style="-fx-background-color: #BAC3C9;" visible="false">
+         <children>
+            <Button fx:id="exitAddEventPane" layoutX="299.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitAddEventPaneEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-close_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Button>
+            <VBox layoutX="54.0" layoutY="85.0" prefHeight="582.0" prefWidth="372.0" spacing="12.0" translateX="-58.0" translateY="-59.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="330.0" spacing="26.0" translateX="-17.0">
+                     <children>
+                        <TextField fx:id="eventTitle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Titre Evenement " styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eventResponsable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Responsable Evenement" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="eventAdress" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Emplacement Evenement" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker fx:id="eventStartDate" editable="false" prefHeight="30.0" prefWidth="219.0" promptText=" Date Debut" styleClass="date-picker" stylesheets="@addemploye.css" translateX="63.0" />
+                        <DatePicker fx:id="eventFinalDate" editable="false" layoutX="10.0" layoutY="242.0" prefHeight="30.0" prefWidth="220.0" promptText="Date Fin" styleClass="date-picker" stylesheets="@addemploye.css" translateX="63.0" />
+                     </children>
+                  </VBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="212.0" spacing="10.0" translateX="51.0">
+                     <children>
+                        <Button fx:id="addEventButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addEventEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                        <Button fx:id="saveEventButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveEventEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="clearEventButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearEventEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

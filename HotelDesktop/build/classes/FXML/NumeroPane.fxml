@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="NumeroPane" prefHeight="161.0" prefWidth="283.0" styleClass="Phonepane" stylesheets="@login.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.NumeroPaneController">
+   <children>
+      <Label layoutX="11.0" layoutY="17.0" text=" Saisir Votre Numero De Telephone : " />
+      <TextField fx:id="numeroDeTelephone" layoutX="54.0" layoutY="57.0" promptText="Numero Du telephone" />
+      <JFXButton layoutX="109.0" layoutY="110.0" onAction="#nextEvent" prefHeight="25.0" prefWidth="54.0" styleClass="Button-loginButton" stylesheets="@login.css" text="Next" />
+   </children>
+</Pane>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ChefReceptionController>
+   <children>
+      <Pane prefHeight="807.0" prefWidth="220.0" styleClass="leftPane" stylesheets="@admin.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="809.0" prefWidth="220.0" spacing="111.0" stylesheets="@admin.css">
+               <children>
+                  <VBox stylesheets="@admin.css" translateY="55.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="57.0" stroke="BLACK" strokeType="INSIDE" translateX="51.0" translateY="12.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="225.0" text="User " textFill="#fcfafa" translateY="19.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefWidth="220.0" spacing="24.0">
+                     <children>
+                        <HBox fx:id="dashboard" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-dashboard_layout_1.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Dashboard">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="chart" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-chart.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Chart">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="maps" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-maps.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Maps">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-user_account.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Agents">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-notification.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Services">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-messages.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="Messagerie">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="221.0" spacing="11.0" stylesheets="@admin.css">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/icons8-sign_out_1.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton alignment="CENTER" styleClass="button-menu2" stylesheets="@admin.css" text="SignOut">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="7.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="219.0" layoutY="-7.0" prefHeight="833.0" prefWidth="1085.0" stylesheets="@admin.css">
+         <content>
+            <Pane prefHeight="832.0" prefWidth="1063.0">
+               <children>
+                  <Pane fx:id="mapsPane" prefHeight="818.0" prefWidth="1060.0">
+                     <children>
+                        <VBox layoutY="6.0" prefHeight="811.0" prefWidth="1061.0">
+                           <children>
+                              <VBox spacing="8.0">
+                                 <children>
+                                    <Label text="Dashboard ">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="0.0" prefWidth="1029.0">
+                                       <children>
+                                          <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5" />
+                                          <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                             <graphic>
+                                                <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/icons8-settings.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                             <graphic>
+                                                <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Icons/icons8-down_1.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </VBox>
+                              <Pane prefHeight="811.0" prefWidth="1061.0">
+                                 <children>
+                                    <HBox layoutX="-2.0" layoutY="-2.0" prefHeight="728.0" prefWidth="1059.0">
+                                       <children>
+                                          <VBox prefHeight="769.0" prefWidth="103.0" styleClass="message-tools-vbox" stylesheets="@admin.css">
+                                             <children>
+                                                <VBox alignment="CENTER" prefHeight="415.0" prefWidth="103.0" spacing="30.0" stylesheets="@admin.css" translateY="150.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" styleClass="button-menu" stylesheets="@admin.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" styleClass="button-menu">
+                                                         <graphic>
+                                                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" styleClass="button-menu">
+                                                         <graphic>
+                                                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" styleClass="button-menu">
+                                                         <graphic>
+                                                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </VBox>
+                                                <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="95.0" styleClass="button-menu" stylesheets="@admin.css" translateX="1.0" translateY="257.0">
+                                                   <graphic>
+                                                      <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                          <VBox minWidth="-Infinity" prefHeight="709.0" prefWidth="379.0" styleClass="message-search-vbox" stylesheets="@admin.css">
+                                             <children>
+                                                <Line endX="279.6651611328125" endY="81.62513732910156" startX="-100.62774658203125" startY="81.6251220703125" translateY="70.0" />
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="312.0" promptText="Search" styleClass="chat-search" stylesheets="@admin.css" translateX="37.0" translateY="10.0">
+                                                   <font>
+                                                      <Font size="28.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="734.0" prefWidth="574.0" stylesheets="@admin.css">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" styleClass="message-top-vbox" stylesheets="@admin.css">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="46.0" prefWidth="193.0" text="Aymane Sabri " translateY="5.0">
+                                                         <font>
+                                                            <Font size="25.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <ScrollPane fx:id="msgScrollPane" prefHeight="708.0" prefWidth="574.0">
+                                                   <content>
+                                                      <VBox fx:id="msgVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="572.0" styleClass="scroll-pane" stylesheets="@admin.css">
+                                                         <children>
+                                                            <HBox minHeight="-Infinity" prefHeight="61.0" prefWidth="580.0" stylesheets="@admin.css">
+                                                               <children>
+                                                                  <TextFlow fx:id="msgTextFlow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="559.0" styleClass="text-flow" stylesheets="@admin.css">
+                                                                     <HBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                  </TextFlow>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </content>
+                                                </ScrollPane>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" styleClass="message-top-vbox" stylesheets="@admin.css" translateY="-7.0">
+                                                   <children>
+                                                      <TextField fx:id="mssgTextField" prefHeight="55.0" prefWidth="520.0" promptText="Taper Votre Message" styleClass="messages-text-fied" stylesheets="@admin.css">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Button fx:id="sendButton" alignment="BOTTOM_LEFT" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="70.0" styleClass="button-menu" stylesheets="@admin.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="37.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Icons/icons8-email_send.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>

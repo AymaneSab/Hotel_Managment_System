@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1280.0" stylesheets="@chefcomptabilite.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ChefComptabiliteController">
+   <children>
+      <Pane prefHeight="789.0" prefWidth="220.0" styleClass="leftPane" stylesheets="@chefcomptabilite.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="734.0" prefWidth="220.0" spacing="111.0" stylesheets="@chefreception.css">
+               <children>
+                  <VBox stylesheets="@admin.css" translateY="55.0">
+                     <children>
+                        <Circle fx:id="chefComptableImage" fill="DODGERBLUE" radius="57.0" stroke="BLACK" strokeType="INSIDE" translateX="51.0" translateY="12.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="225.0" stylesheets="@chefreception.css" text="Aymane Sabri" textFill="#f8f4f4" translateY="19.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="558.0" prefWidth="220.0" spacing="57.0" stylesheets="@admin.css" translateY="47.0">
+                     <children>
+                        <JFXButton fx:id="dashboardBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="228.0" styleClass="button-menu2" stylesheets="@chefcomptabilite.css" text="Dashboard">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-dashboard_layout_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="factureBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="266.0" styleClass="button-menu2" stylesheets="@chefcomptabilite.css" text="Facturation">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-pay.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="signOutBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="277.0" styleClass="button-menu2" stylesheets="@chefcomptabilite.css" text="SignOut">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-sign_out_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="217.0" prefHeight="789.0" prefWidth="1061.0" stylesheets="@chefcomptabilite.css">
+         <children>
+            <Pane fx:id="dashboardPane" layoutX="-4.0" prefHeight="790.0" prefWidth="1068.0" style="-fx-background-color: #E5E8EA;" stylesheets="@chefcomptabilite.css">
+               <children>
+                  <HBox layoutX="10.0">
+                     <children>
+                        <VBox prefHeight="75.0" prefWidth="1025.0" spacing="8.0" stylesheets="@chefcomptabilite.css" translateX="-5.0">
+                           <children>
+                              <Label text="Dashboard " textFill="#0d0d0d" translateX="7.0" translateY="7.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="717.7783203125" endY="-1.004934310913086E-4" startX="-284.20953369140625" startY="5.000022888183594" stroke="#141313" translateX="6.0" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="-18.0">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="5.0" layoutY="64.0" prefHeight="129.0" prefWidth="643.0" spacing="64.0" stylesheets="@chefcomptabilite.css" translateX="-16.0">
+                     <children>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css" translateX="43.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="176.0" text="Facture Payee" translateX="42.0" translateY="-3.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox spacing="27.0">
+                                 <children>
+                                    <ImageView fitHeight="81.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" translateX="8.0" translateY="-11.0">
+                                       <image>
+                                          <Image url="@../Icons/icons8-pay_2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="payedFactureLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="136.0" text="121" textFill="#489da4" translateX="-2.0" translateY="16.0">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css" translateX="20.0">
+                           <children>
+                              <Label minWidth="-Infinity" prefHeight="33.0" prefWidth="237.0" text="Facture Nom Payees" translateX="10.0" translateY="-3.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <HBox spacing="22.0">
+                                 <children>
+                                    <ImageView fitHeight="58.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true" translateX="10.0">
+                                       <image>
+                                          <Image url="@../Icons/icons8-time_to_pay_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="notPayedFactureLabel" alignment="CENTER" prefHeight="43.0" prefWidth="170.0" text="12" textFill="#4ba0a8" translateY="13.0">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="46.0" layoutY="215.0" prefHeight="273.0" prefWidth="603.0" spacing="67.0" stylesheets="@chefcomptabilite.css" translateX="-16.0">
+                     <children>
+                        <VBox minWidth="-Infinity" prefHeight="273.0" prefWidth="603.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="219.0" text="Facture">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <LineChart fx:id="factureLineChartOnDashboard">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="47.0" layoutY="511.0" prefHeight="261.0" prefWidth="1031.0" spacing="22.0" stylesheets="@chefcomptabilite.css" translateX="-16.0">
+                     <children>
+                        <VBox prefHeight="261.0" prefWidth="468.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label text="Events :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="serachEventOnDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="144.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="221.0" translateY="2.0" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="dashboardTableEvent" prefHeight="288.0" prefWidth="961.0" styleClass="dash-table-view" stylesheets="@chefcomptabilite.css">
+                                 <columns>
+                                    <TableColumn fx:id="dashboardEventTitleColumn" prefWidth="75.0" text="Titre" />
+                                    <TableColumn fx:id="dashboardResponsableEventcolumn" prefWidth="129.1826171875" text="Responsable" />
+                                    <TableColumn fx:id="dashboardStartEventColumn" prefWidth="105.4285888671875" text="Date  Debut " />
+                                    <TableColumn fx:id="dashboardFinalEventColumn" prefWidth="156.81735229492188" text="Date  Fin" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="261.0" prefWidth="524.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="211.0" text="Notifications">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="searchNotifOnDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="119.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;">
+                                       <HBox.margin>
+                                          <Insets left="248.0" top="3.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableNotificationOnAdminDashboad" prefHeight="288.0" prefWidth="961.0" styleClass="dash-table-view" stylesheets="@chefcomptabilite.css">
+                                 <columns>
+                                    <TableColumn fx:id="emetteurNotificationOnAdminDashboard" prefWidth="105.4285888671875" text="Emetteur" />
+                                    <TableColumn fx:id="contentNotificationOnAdminDashboard" prefWidth="416.99993896484375" text="Content" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="653.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="393.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                     <children>
+                        <Label text="Demande">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="demandePieChartOnDashboard" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="facturePane" focusTraversable="true" prefHeight="789.0" prefWidth="1063.0" style="-fx-background-color: #E5E8EA;" stylesheets="@chefcomptabilite.css">
+               <children>
+                  <VBox layoutX="30.0" layoutY="353.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="1037.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css" translateX="-12.0">
+                     <children>
+                        <HBox prefHeight="87.0" prefWidth="1037.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="274.0" text="Tables Des Factures">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="searchNotifOnDashboard1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="271.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="477.0">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tableDemandeOnComptable" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" onMousePressed="#showDemandeInformation" prefHeight="380.0" prefWidth="1049.0" styleClass="dash-table-view" stylesheets="@chefcomptabilite.css">
+                           <columns>
+                              <TableColumn fx:id="idDemandeOnComptableColumn" minWidth="0.0" prefWidth="0.0" text="IdDemande" />
+                              <TableColumn fx:id="statusDemandeOnComptableColumn" minWidth="0.0" prefWidth="0.0" text="StatusDemandeOnComptable" />
+                              <TableColumn fx:id="serviceDemandeOnComptableColumn" prefWidth="169.6610565185547" text="Service Facture" />
+                              <TableColumn fx:id="dateDemandeOnComptableColumn" prefWidth="134.1507568359375" text="Date Facture" />
+                              <TableColumn fx:id="montantDemandeOnComptableColumn" prefWidth="147.5091552734375" text="Montant Facture" />
+                              <TableColumn fx:id="descriptionDemandeOnComptableColumn" prefWidth="595.0" text="Description Facture" />
+                           </columns>
+                        </TableView>
+                        <HBox spacing="19.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton fx:id="verifiyFactureButton" onAction="#verifiyFactureEvent" prefHeight="23.0" prefWidth="146.0" styleClass="button-employees" stylesheets="@chefcomptabilite.css" text="Valider " />
+                              <JFXButton fx:id="eliminateFactureButton" onAction="#eliminateFactureEvent" prefHeight="23.0" prefWidth="146.0" styleClass="button-employees" stylesheets="@chefcomptabilite.css" text="Rejeter" />
+                              <JFXButton fx:id="eliminateFactureButton1" layoutX="175.0" layoutY="10.0" onAction="#eliminateFactureEvent" prefHeight="23.0" prefWidth="146.0" styleClass="button-employees" stylesheets="@chefcomptabilite.css" text="Imprimer" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="979.0" spacing="8.0" stylesheets="@chefcomptabilite.css" translateX="-6.0">
+                           <children>
+                              <Label text="Dashboard " textFill="#0a0a0a" translateX="7.0" translateY="7.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="717.7783203125" endY="-1.004934310913086E-4" startX="-284.20953369140625" startY="5.000022888183594" stroke="#0a0a0a" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateY="8.0">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" translateX="17.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="17.0" layoutY="61.0" prefHeight="273.0" prefWidth="603.0" spacing="67.0" stylesheets="@chefcomptabilite.css">
+                     <children>
+                        <VBox minWidth="-Infinity" prefHeight="273.0" prefWidth="603.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="219.0" text="Facture">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <LineChart fx:id="factureLineChartOnDashboard1">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="636.0" layoutY="65.0" spacing="9.0">
+                     <children>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="417.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="195.0" text="Facture Validee" translateX="42.0" translateY="-3.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox spacing="27.0">
+                                 <children>
+                                    <ImageView fitHeight="81.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="-11.0">
+                                       <image>
+                                          <Image url="@../Icons/icons8-pay_2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="payedFactureLabel1" alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="136.0" text="121" textFill="#489da4" translateX="150.0" translateY="16.0">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="417.0" styleClass="top-vbox" stylesheets="@chefcomptabilite.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="206.0" text="Facture Rejetee" translateX="42.0" translateY="-3.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox spacing="27.0">
+                                 <children>
+                                    <ImageView fitHeight="81.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" translateX="50.0" translateY="-11.0">
+                                       <image>
+                                          <Image url="@../Icons/icons8-pay_2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="payedFactureLabel11" alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="136.0" text="121" textFill="#489da4" translateX="150.0" translateY="16.0">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="addFacturePane" layoutX="42.0" layoutY="9.0" prefHeight="527.0" prefWidth="366.0" style="-fx-background-color: #BAC3C9;" translateX="800.0" translateY="150.0" visible="false">
+         <children>
+            <Button fx:id="exitAddFactureButton" layoutX="340.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitAddFactureEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-close_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Button>
+            <VBox layoutX="54.0" layoutY="85.0" prefHeight="485.0" prefWidth="372.0" spacing="12.0" translateX="-58.0" translateY="-59.0">
+               <children>
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="372.0" spacing="26.0">
+                     <children>
+                        <TextField fx:id="recepteurFacture" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Recepteur" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="318.0" spacing="12.0" translateX="2.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="serviceFacture" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Service" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="montantFacture" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Montant" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextArea fx:id="descriptionFacture" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="285.0" promptText="Descriptin Facture" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="4.0" translateY="-30.0">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <DatePicker fx:id="dateFacture" editable="false" prefHeight="30.0" prefWidth="219.0" promptText=" Date " styleClass="date-picker" stylesheets="@addemploye.css" translateX="59.0" translateY="-69.0" />
+                     </children>
+                  </VBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="233.0" spacing="10.0" translateX="63.0">
+                     <children>
+                        <Button fx:id="addFactureBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addFactureEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                        <Button fx:id="saveFactureBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveFactureEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="clearFactureBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearFactureEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ChefCuisineController">
+   <children>
+      <Pane prefHeight="789.0" prefWidth="220.0" styleClass="leftPane" stylesheets="@chefcuisine.css">
+         <children>
+            <VBox layoutY="-2.0" prefHeight="809.0" prefWidth="220.0" spacing="111.0" stylesheets="@chefcuisine.css">
+               <children>
+                  <VBox stylesheets="@chefcuisine.css" translateY="55.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="57.0" stroke="BLACK" strokeType="INSIDE" translateX="51.0" translateY="12.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="225.0" stylesheets="@chefreception.css" text="Aymane Sabri" textFill="#070707" translateY="19.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="461.0" prefWidth="220.0" spacing="62.0" stylesheets="@chefcuisine.css" translateY="9.0">
+                     <children>
+                        <JFXButton fx:id="dashboardBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="228.0" styleClass="button-menu2" stylesheets="@chefcuisine.css" text="Dashboard">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-dashboard_layout_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="creationProduitBtn" alignment="TOP_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="250.0" onAction="#click" prefHeight="40.0" prefWidth="308.0" styleClass="button-menu2" stylesheets="@chefcuisine.css" text="Creation Produit">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-room_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="demandeProduitBtn" alignment="TOP_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="262.0" onAction="#click" prefHeight="40.0" prefWidth="308.0" styleClass="button-menu2" stylesheets="@chefcuisine.css" text="Demande Produit">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-room_2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="notificationBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="287.0" styleClass="button-menu2" stylesheets="@chefcuisine.css" text="Notifications">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-notification.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="signOutBtn" alignment="TOP_LEFT" graphicTextGap="25.0" onAction="#click" prefHeight="40.0" prefWidth="277.0" styleClass="button-menu2" stylesheets="@chefcuisine.css" text="SignOut">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Icons/icons8-sign_out_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="217.0" prefHeight="788.0" prefWidth="1061.0" stylesheets="@chefcuisine.css">
+         <children>
+            <Pane fx:id="DashboardPane" prefHeight="790.0" prefWidth="1059.0" style="-fx-background-color: white;" stylesheets="@chefcuisine.css">
+               <children>
+                  <VBox layoutX="15.0" prefHeight="75.0" prefWidth="1025.0" spacing="8.0" stylesheets="@chefcuisine.css" translateX="-5.0">
+                     <children>
+                        <Label text="Dashboard " translateY="7.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="669.0833740234375" endY="3.510713577270508E-5" startX="-284.20953369140625" startY="2.288818359375E-5" />
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutY="64.0" prefHeight="94.0" prefWidth="1060.0" spacing="64.0" stylesheets="@chefcuisine.css" translateX="-16.0">
+                     <children>
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefcuisine.css" translateX="43.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="159.0" text="Toxique" translateX="105.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="95.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="-35.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-mushroom.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="toxiqueProductLabel" text="95" translateX="186.0" translateY="-81.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="278.0" styleClass="top-vbox" stylesheets="@chefcuisine.css" translateX="20.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="132.0" text="Non Toxique" translateX="124.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="95.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="-35.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-dining_room.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label fx:id="nonToxiqueProductLabel" text="95" translateX="186.0" translateY="-81.0">
+                                 <font>
+                                    <Font name="Times New Roman" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="357.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                           <children>
+                              <Label fx:id="roomReservationLabel" prefHeight="30.0" prefWidth="221.0" text=" Nombre Demande" translateX="102.0" translateY="10.0">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="115.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" translateY="-50.0">
+                                 <image>
+                                    <Image url="@../Icons/icons8-bell_service.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nombreNettoyageDemande" text="112" translateX="157.0" translateY="-79.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="46.0" layoutY="215.0" prefHeight="273.0" prefWidth="999.0" spacing="67.0" stylesheets="@chefcuisine.css" translateX="-16.0">
+                     <children>
+                        <VBox minWidth="-Infinity" prefHeight="273.0" prefWidth="603.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="244.0" text="Produits Nettoyage">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <PieChart fx:id="nettoyageProductPieChart" />
+                           </children>
+                        </VBox>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="358.0" styleClass="top-vbox" stylesheets="@chefcuisine.css" translateX="-34.0">
+                           <children>
+                              <Label text="Demande">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <PieChart fx:id="demandePieChart" prefHeight="224.0" prefWidth="278.0" styleClass="piechart-legend" stylesheets="@../../../Hotel/src/FXML/hotelmanager.css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="47.0" layoutY="511.0" prefHeight="261.0" prefWidth="1001.0" spacing="22.0" stylesheets="@chefcuisine.css" translateX="-16.0">
+                     <children>
+                        <VBox prefHeight="261.0" prefWidth="468.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                           <children>
+                              <HBox>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label text="Events :">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="113.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="249.0" translateY="6.0" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="dashboardTableEvent" prefHeight="288.0" prefWidth="961.0" stylesheets="@admin.css">
+                                 <columns>
+                                    <TableColumn fx:id="dashboardEventTitleColumn" prefWidth="75.0" text="Titre" />
+                                    <TableColumn fx:id="dashboardResponsableEventcolumn" prefWidth="129.1826171875" text="Responsable" />
+                                    <TableColumn fx:id="dashboardStartEventColumn" prefWidth="105.4285888671875" text="Date  Debut " />
+                                    <TableColumn fx:id="dashboardFinalEventColumn" prefWidth="156.81735229492188" text="Date  Fin" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="261.0" prefWidth="500.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="130.0" text="Notifications">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableNotificationOnDashboard" prefHeight="218.0" prefWidth="500.0">
+                                 <columns>
+                                    <TableColumn fx:id="emetteurNotificationOnDashboardColumn" prefWidth="141.2977294921875" text="Emetteur " />
+                                    <TableColumn fx:id="contentNotificationOnDashboardColumn" prefWidth="357.70220947265625" text="Content" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane fx:id="creationProduitPane" focusTraversable="true" layoutX="6.0" prefHeight="789.0" prefWidth="1060.0" style="-fx-background-color: white;" stylesheets="@chefcuisine.css" visible="false">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-8.0" spacing="8.0" stylesheets="@chefcuisine.css">
+                     <children>
+                        <Label text="Creation Produits" translateY="3.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Line>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="504.0" layoutY="76.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="542.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                     <children>
+                        <Pane fx:id="addRepasPane1" prefHeight="652.0" prefWidth="388.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <VBox layoutX="54.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="544.0" spacing="12.0" translateX="-58.0" translateY="-4.0">
+                                 <children>
+                                    <ImageView fitHeight="109.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true" translateX="42.0" translateY="-41.0">
+                                       <image>
+                                          <Image url="@../Icons/icons8-purchase_order_1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="544.0" spacing="26.0" translateY="32.0">
+                                       <children>
+                                          <TextField fx:id="titreProduit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="290.0" promptText="Titre " styleClass="text-field" stylesheets="@addemploye.css" translateX="241.0" translateY="-203.0">
+                                             <font>
+                                                <Font name="Andale Mono" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="prixProduit" layoutX="10.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="288.0" promptText="Prix" styleClass="text-field" stylesheets="@addemploye.css" translateX="243.0" translateY="-207.0">
+                                             <font>
+                                                <Font name="Andale Mono" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="520.0" spacing="12.0" translateX="8.0" translateY="-174.0">
+                                             <children>
+                                                <ComboBox fx:id="typeProduit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="521.0" promptText="Type" styleClass="service-combo-box" stylesheets="@addemploye.css" translateX="2.0" translateY="-17.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                          <TextArea fx:id="descriptionProduit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="522.0" promptText="Descriptin Produit" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="-11.0" translateY="-220.0">
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                       </children>
+                                    </VBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="396.0" spacing="47.0" translateX="72.0" translateY="-279.0">
+                                       <children>
+                                          <Button fx:id="addProduitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduitEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                                          <Button fx:id="saveProduitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveProduitEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                                          <Button fx:id="clearProduitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearProduitEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                                       </children>
+                                    </HBox>
+                                    <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="336.0" styleClass="top-vbox" stylesheets="@chefcuisine.css" translateX="3.0" translateY="-263.0">
+                                       <children>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="31.0" prefWidth="609.0" stylesheets="@chefcuisine.css">
+                                             <children>
+                                                <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="370.0" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <TableView fx:id="tableProduit" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#showMenuInformation" prefHeight="220.0" prefWidth="546.0" stylesheets="@chefcuisine.css">
+                                             <columns>
+                                                <TableColumn fx:id="idProduitColumn" minWidth="0.0" prefWidth="0.0" text="Id" />
+                                                <TableColumn fx:id="titreProduitColumn" prefWidth="90.89251708984375" text="Titre" />
+                                                <TableColumn fx:id="typeProduitColumn" prefWidth="103.5802001953125" text="Type" />
+                                                <TableColumn fx:id="prixProduitColumn" prefWidth="103.5802001953125" text="Prix" />
+                                                <TableColumn fx:id="descriptionProduitColumn" prefWidth="246.0" text="Description" />
+                                             </columns>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </TableView>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="303.0" spacing="47.0" translateX="113.0" translateY="21.0">
+                                             <children>
+                                                <Button fx:id="modifyProduitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyProduitEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Modifier" />
+                                                <Button fx:id="deleteProduitBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteProduitEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Supprimer" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="demandeProduitPane" focusTraversable="true" layoutX="16.0" layoutY="10.0" prefHeight="789.0" prefWidth="1060.0" style="-fx-background-color: white;" stylesheets="@chefcuisine.css" translateX="-9.0" translateY="-7.0" visible="false">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-8.0" spacing="8.0" stylesheets="@chefcuisine.css">
+                     <children>
+                        <Label text="Demande Produit" translateY="3.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Line>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="504.0" layoutY="76.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="548.0" styleClass="top-vbox" stylesheets="@chefcuisine.css" translateX="-491.0">
+                     <children>
+                        <Pane fx:id="addRepasPane11" prefHeight="628.0" prefWidth="542.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <VBox layoutX="54.0" layoutY="-67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="544.0" spacing="12.0" translateX="-58.0" translateY="93.0">
+                                 <children>
+                                    <ImageView fitHeight="112.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" translateX="31.0" translateY="-9.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@../Icons/icons8-dashboard_layout.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="544.0" spacing="26.0" translateY="65.0">
+                                       <children>
+                                          <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="528.0" spacing="12.0" translateX="8.0" translateY="-174.0">
+                                             <children>
+                                                <ComboBox fx:id="typeProduitOnDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#loadProductsItems" prefHeight="26.0" prefWidth="285.0" promptText="Type" styleClass="service-combo-box" stylesheets="@addemploye.css" translateX="229.0" translateY="-17.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                          <ComboBox fx:id="produitOnDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="285.0" promptText="Produit" styleClass="service-combo-box" stylesheets="@addemploye.css" translateX="242.0" translateY="-183.0" />
+                                          <TextField fx:id="quantiteProduit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="506.0" promptText="Quantite" styleClass="text-field" stylesheets="@addemploye.css" translateX="21.0" translateY="-179.0">
+                                             <font>
+                                                <Font name="Andale Mono" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextArea fx:id="ficheDemande" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="522.0" promptText="Descriptin Repas" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="-11.0" translateY="-220.0">
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="528.0" spacing="12.0" translateY="-718.0" />
+                                       </children>
+                                    </VBox>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="486.0" spacing="47.0" translateX="34.0" translateY="17.0">
+                                       <children>
+                                          <Button fx:id="addProduitOnDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addProduitOnDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                                          <Button fx:id="submitDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Envoyer" />
+                                          <Button fx:id="clearDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                                          <Button fx:id="saveDemandeBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="570.0" layoutY="77.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="484.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                     <children>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="31.0" prefWidth="609.0" stylesheets="@chefcuisine.css">
+                           <children>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="140.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-color: #1EA2EC; -fx-border-radius: 20; -fx-prompt-text-fill: black; -fx-text-fill: black;" translateX="318.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tableDemande" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#showMenuInformation" prefHeight="595.0" prefWidth="478.0" stylesheets="@chefcuisine.css">
+                           <columns>
+                              <TableColumn fx:id="statusDemandeColumn" minWidth="0.0" prefWidth="0.0" text="StatusDemande" />
+                              <TableColumn fx:id="idDemandeColumn" minWidth="0.0" prefWidth="82.4276123046875" text="Id Demande" />
+                              <TableColumn fx:id="dateDemandeColumn" prefWidth="195.8466796875" text="Date " />
+                              <TableColumn fx:id="montantDemandeColumn" prefWidth="98.1533203125" text="Montant" />
+                              <TableColumn fx:id="descriptionDemandeColumn" prefWidth="210.0" text="Description" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="396.0" spacing="47.0" translateY="22.0">
+                           <children>
+                              <Button fx:id="modifyDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Modifier" />
+                              <Button fx:id="deleteDemandeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteDemandeEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Supprimer" />
+                           </children>
+                           <VBox.margin>
+                              <Insets left="80.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane fx:id="notificationPane" prefHeight="788.0" prefWidth="1064.0" style="-fx-background-color: white;" visible="false">
+               <children>
+                  <VBox prefHeight="76.0" prefWidth="1064.0" spacing="8.0" stylesheets="@chefcuisine.css">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="124.0" text="Notifications" translateX="19.0" translateY="3.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="0.0" prefWidth="1029.0">
+                           <children>
+                              <Line endX="644.4503173828125" endY="3.4332275390625E-5" startX="-284.20953369140625" startY="2.288818359375E-5" translateX="11.0" />
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="11.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-settings.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="46.0" styleClass="parametreButton" stylesheets="@admin.css" translateX="8.0" translateY="-29.0">
+                                 <graphic>
+                                    <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Icons/icons8-down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="20.0" layoutY="70.0" prefHeight="714.0" prefWidth="530.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                     <children>
+                        <VBox maxWidth="-Infinity" minHeight="-Infinity" prefHeight="678.0" prefWidth="513.0" styleClass="notification-vBox" stylesheets="@chefcuisine.css">
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <TableView fx:id="tableNotification" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#showNotificationInformation" prefHeight="677.0" prefWidth="502.0" stylesheets="@chefcuisine.css">
+                                 <columns>
+                                    <TableColumn fx:id="idNotificationColumn" minWidth="0.0" prefWidth="0.0" text="Id" />
+                                    <TableColumn fx:id="emetteurNotificationColumn" prefWidth="121.49472045898438" text="Emetteur" />
+                                    <TableColumn fx:id="titleNotificationColumn" prefWidth="138.8736572265625" text="Title" />
+                                    <TableColumn fx:id="contentNotificationColumn" prefWidth="254.1263427734375" text="Content" />
+                                 </columns>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="583.0" layoutY="71.0" prefHeight="714.0" prefWidth="463.0" styleClass="top-vbox" stylesheets="@chefcuisine.css">
+                     <children>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="37.0" prefWidth="617.0" styleClass="notification-vBox" stylesheets="@chefcuisine.css">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="423.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="37.0" prefWidth="104.0" text="Emetteur :" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="emetteurNotificationLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="313.0" textFill="#f5efef">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="30.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="63.0" prefWidth="423.0" styleClass="notification-vBox" stylesheets="@chefcuisine.css">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="423.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="58.0" prefWidth="75.0" text="Titre" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="titleNotificationLabel" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="308.0" textFill="#f5efef">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="30.0" layoutY="97.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="440.0" prefWidth="423.0" styleClass="notification-vBox" stylesheets="@chefcuisine.css">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox prefHeight="58.0" prefWidth="423.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="75.0" prefWidth="399.0" text="Content" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <JFXTextArea fx:id="contentNotificationLabel" prefHeight="371.0" prefWidth="423.0" />
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="66.0" prefWidth="463.0">
+                           <children>
+                              <Button fx:id="deleteNotificationBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteNotificationEvent" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Supprimer">
+                                 <HBox.margin>
+                                    <Insets left="170.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="addRepasPane" layoutX="52.0" layoutY="-109.0" prefHeight="717.0" prefWidth="366.0" style="-fx-background-color: #BAC3C9;" translateX="800.0" translateY="150.0" visible="false">
+         <children>
+            <Button fx:id="exitAddRepasButton" layoutX="340.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitAddRepasEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-close_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Button>
+            <VBox layoutX="54.0" layoutY="56.0" prefHeight="725.0" prefWidth="372.0" spacing="12.0" translateX="-58.0" translateY="-59.0">
+               <children>
+                  <Rectangle fx:id="repasImageRectangle" arcHeight="5.0" arcWidth="5.0" fill="#fdfeff" height="118.0" onMousePressed="#addRepasImage" stroke="BLACK" strokeType="INSIDE" translateX="80.0" translateY="35.0" width="215.0" />
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="372.0" spacing="26.0" translateY="32.0">
+                     <children>
+                        <TextField fx:id="titreRepas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Titre " styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="numeroRepas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Numero" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="prixRepas" layoutX="10.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Prix" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0" translateY="-16.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                        </TextField>
+                        <HBox layoutX="10.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="318.0" spacing="12.0" translateX="5.0" translateY="-16.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="menuRepas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Menu" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="318.0" spacing="12.0" translateX="8.0" translateY="-15.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="typeRepas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Type" styleClass="service-combo-box" stylesheets="@addemploye.css" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="descriptionRepas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="285.0" promptText="Descriptin Repas" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="10.0" translateY="-44.0">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="213.0" spacing="10.0" translateX="70.0" translateY="-6.0">
+                     <children>
+                        <Button fx:id="addRepasBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addRepasEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                        <Button fx:id="saveRepasBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveRepasEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="clearRepasBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearRepasEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="addMenuPane" layoutX="62.0" layoutY="29.0" prefHeight="512.0" prefWidth="366.0" style="-fx-background-color: #BAC3C9;" translateX="800.0" translateY="150.0" visible="false">
+         <children>
+            <Button fx:id="exitAddMenuButton1" layoutX="340.0" layoutY="1.0" mnemonicParsing="false" onAction="#exitAddMenuEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" textFill="#fffbfb">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/icons8-close_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </Button>
+            <VBox layoutX="54.0" layoutY="72.0" prefHeight="548.0" prefWidth="372.0" spacing="12.0" translateX="-58.0" translateY="-59.0">
+               <children>
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="372.0" spacing="26.0">
+                     <children>
+                        <TextField fx:id="titreMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Titre Menu" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="nombreRepasMenu" layoutX="10.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0" promptText="Nombre Repas" styleClass="text-field" stylesheets="@addemploye.css" translateX="36.0" translateY="-7.0">
+                           <font>
+                              <Font name="Andale Mono" size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="318.0" spacing="12.0" translateX="8.0" translateY="-15.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="2.0">
+                                 <image>
+                                    <Image url="@../../../Hotel/src/Icons/icons8-services.png" />
+                                 </image>
+                              </ImageView>
+                              <ComboBox fx:id="typeMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="284.0" promptText="Type" styleClass="service-combo-box" stylesheets="@addemploye.css">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="descriptionMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="285.0" promptText="Descriptin Menu" styleClass="text-Area-facture" stylesheets="@chefcomptabilite.css" translateX="10.0" translateY="-44.0">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="216.0" spacing="10.0" translateX="70.0" translateY="-70.0">
+                     <children>
+                        <Button fx:id="addMenuBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addMenuEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Add" />
+                        <Button fx:id="saveMenuBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveMenuEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="clearMenuBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clearMenuEvent" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #304C62; -fx-text-fill: white;" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

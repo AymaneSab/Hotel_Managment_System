@@ -1,0 +1,17 @@
+.Button-loginButton{
+    -fx-background-color :  #304C62;
+    -fx-text-fill :  white;
+}
+
+.vbox{
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+}
+.Phonepane{
+    -fx-background-color : #E5E8EA
+}
+
+.PhoneTextField{
+    -fx-prompt-text-fill :black;
+    -fx-prompt-text : Numero Du telephone;
+}

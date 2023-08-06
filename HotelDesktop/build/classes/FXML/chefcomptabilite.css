@@ -1,0 +1,183 @@
+.leftPane{
+    -fx-background-color : #3E4E65;
+}
+.button-menu2{
+    -fx-background-color : transparent;
+    -fx-text-fill : white;
+}
+.button-menu2:hover{
+    -fx-background-color : white;
+    -fx-text-fill : black;
+
+}
+.button-menu2:pressed{
+    -fx-background-color : #006D99;
+    -fx-text-fill : white;
+
+}
+.top-vbox{
+    -fx-background-color : white;
+    -fx-background-radius: 10;
+}
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    /*Les Cellule de la tabale */
+    -fx-background-color: transparent;
+    -fx-border-color: #8CC9EA;
+    -fx-border-width:   1px 0px 1px 0px ;
+}
+
+.table-view .column-header-background .label{
+    /* le text dans les cellules */
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-background-color : transparent;
+    -fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color : blue ;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-table-cell-border-color: #B5E6F6;
+
+}
+
+.table-row-cell:odd{
+    -fx-background-color: transparent;
+     -fx-table-cell-border-color : #B5E6F6;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3E4E65;
+     -fx-table-cell-text-fill : white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+.text-Area-facture{
+    
+    -fx-background-color : transparent;
+    -fx-border-color : grey;
+}
+.dash-table-view{
+    -fx-background-color: transparent;
+
+}
+
+.dash-table-view:focused{
+    -fx-background-color: white;
+
+}
+
+
+.dash-table-view .column-header-background{
+    /*Les Cellule de la tabale */
+    -fx-background-color: #79ACBD;
+    -fx-border-color: white;
+    -fx-border-width:   0px ;
+}
+
+.dash-table-view .column-header-background .label{
+    /* le text dans les cellules */
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.dash-table-view .column-header {
+    -fx-background-color: trasnparent;
+}
+
+.dash-table-view .table-cell{
+    -fx-background-color : transparent;
+    -fx-text-fill: black;
+}
+
+.dash-table-row-cell{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color : #3B4A60 ;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-table-cell-border-color: #3B4A60;
+
+}
+
+.dash-table-row-cell:odd{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color : #3B4A60;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+}
+
+.dash-table-row-cell:selected {
+    -fx-background-color: #ccffff;
+    -fx-table-cell-text-fill : white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.dash-table-view > .virtual-flow > .scroll-bar:vertical,
+.dash-table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.dash-table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.dash-table-view > .virtual-flow > .scroll-bar:horizontal,
+.dash-table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.dash-table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+
+
+.dash-table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.dash-table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+.button-employees{
+    -fx-background-color : #79ACBD;
+    -fx-text-fill : white;
+    -fx-border-color : transparent;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+}
+
+.button-employees:hover{
+    -fx-background-color : #006D99;
+    -fx-text-fill : white;
+}
+.button-employees:pressed{
+    -fx-background-color : #006D99;
+}
